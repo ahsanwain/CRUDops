@@ -5,12 +5,20 @@ app.get('/', (req, res) => {
   res.send("<h1>Welcome</h1><p>My first express app</p>");
 });
 
-app.get('/about', (req, res) => {
-    res.send('<h1>About Me:</h1><p></p>My name is Ahsan Wain and I like to sleep.</p>');
+app.post('/register', (req, res) => {
+    res.sendStatus(201);
 });
 
-app.get('/contact', (req, res) => {
-    res.send("<h1>Contact Me:</h1><p>Phone: +92-311-5113005 </p><p>Email: ahsanwain1516@gmail.com</p>");
+app.put('/users/ahsan', (req, res) => {
+    res.sendStatus(200);
+});
+
+app.patch('/users/ahsan', (req, res) => {
+    res.sendStatus(200);
+});
+
+app.delete('/users/ahsan', (req, res) => {
+    res.sendStatus(200);
 });
 
 app.listen(3000, () => {
